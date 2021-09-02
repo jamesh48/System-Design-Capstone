@@ -1,0 +1,12 @@
+{
+  "name": "system-design-capstone",
+  "version": "1.0.0",
+  "description": "SDC",
+  "main": "index.js",
+  "scripts": {
+    "git": "git add . && git commit -m",
+    "postgit": "git push"
+  },
+  "author": "James Hrivnak",
+  "license": "ISC"
+}

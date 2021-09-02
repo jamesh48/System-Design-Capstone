@@ -1,0 +1,18 @@
+{
+  "name": "data-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production",
+    "git": "git add . && git commit -m",
+    "postgit": "git push && npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpt26-sdc-prototype/app-server-1.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

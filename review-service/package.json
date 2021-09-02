@@ -1,0 +1,68 @@
+{
+  "name": "sdc-reviews-service",
+  "version": "1.0.0",
+  "description": "review service",
+  "author": "Tim Anderson & James Hrivnak",
+  "license": "",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "mochatest": "mocha spec",
+    "restart": "pm2 startOrRestart ./server/ecosystem.config.js",
+    "deploy": "pm2 deploy ./server/ecosystem.config.js production",
+    "test": "jest --detectOpenHandles ./test",
+    "build": "webpack"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./test/test-env.js"
+    ]
+  },
+  "dependencies": {
+    "aws-sdk": "^2.856.0",
+    "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lorem-ipsum": "^2.0.3",
+    "morgan": "^1.10.0",
+    "newrelic": "^7.5.0",
+    "pg": "^8.6.0",
+    "request": "^2.88.2",
+    "txtgen": "^2.2.8",
+    "username-generator": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
+    "artillery": "^1.7.2",
+    "babel-loader": "^8.2.2",
+    "babelify": "^10.0.0",
+    "browserfy": "^1.0.0",
+    "chai": "^4.3.4",
+    "enzyme": "^3.11.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "grunt": "^1.3.0",
+    "grunt-aws-s3": "^2.0.2",
+    "grunt-browserify": "^6.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "jest": "^26.6.3",
+    "mocha": "^8.3.2",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "^4.0.3",
+    "reactify": "^1.1.1",
+    "styled-components": "^4.4.1",
+    "supertest": "^6.1.3",
+    "time-grunt": "^2.0.0",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0"
+  }
+}
